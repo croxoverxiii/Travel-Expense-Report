@@ -18,7 +18,7 @@ st.markdown(
 )
 
 # 設定你的試算表網址 (請填入你剛剛複製的網址)
-url = "https://docs.google.com/spreadsheets/d/1KH7DE51xdd6ld5ThFsow8tIDX9_bBqbSoSPdcR4UeAM/edit?gid=0#gid=0"
+url = "https://docs.google.com/spreadsheets/d/1KH7DE51xdd6ld5ThFsow8tIDX9_bBqbSoSPdcR4UeAM/edit?usp=sharing"
 
 # 建立 Google Sheets 連線
 conn = st.connection("gsheets", type=GSheetsConnection)
@@ -86,3 +86,4 @@ if not df.empty and current_trip:
         st.subheader(f"📊 {current_trip} 支出明細")
         st.dataframe(trip_df, use_container_width=True)
         st.metric("總支出 (TWD)", f"NT$ {trip_df['台幣總計'].sum():,.0f}")
+
